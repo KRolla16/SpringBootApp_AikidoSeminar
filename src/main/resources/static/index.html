@@ -1,0 +1,60 @@
+<!doctype html>
+<html ng-app="demo" ng-controller="usersCtrl">
+<head>
+    <title>Aikido Seminar</title>
+    <link rel="stylesheet" href="w3.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+
+<div class="w3-container">
+
+    <h3>Students</h3>
+
+    <table class="w3-table w3-bordered w3-striped">
+        <tr>
+            <th>Edit</th>
+            <th>Id</th>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Name</th>
+            <th>Surname</th>
+            <th>Password</th>
+            <th>Phone Number</th>
+            <th>Status</th>
+        </tr>
+        <tr ng-repeat="user in users">
+            <td>
+                <button class="w3-btn w3-ripple" ng-click="editUser(users.indexOf(user))">&#9998; Edit</button>
+            </td>
+            <td>{{ user.id }}</td>
+            <td>{{ user.username }}</td>
+            <td>{{ user.email }}</td>
+            <td>{{ user.firstName }}</td>
+            <td>{{ user.lastName }}</td>
+            <td>{{ user.password }}</td>
+            <td>{{ user.phone }}</td>
+            <td>{{ user.userStatus }}</td>
+        </tr>
+    </table>
+    <br>
+    <button class="w3-btn w3-green w3-ripple" ng-click="editStudent('new')">&#9998; Create New User</button>
+
+    <form ng-hide="hideform">
+        <h3 ng-show="edit">Create New User:</h3>
+        <h3 ng-hide="edit">Edit User:</h3>
+        <label>Name:</label>
+        <input class="w3-input w3-border" type="text" ng-model="name" ng-disabled="!edit" placeholder="Name">
+        <br>
+        <label>Surname:</label>
+        <input class="w3-input w3-border" type="text" ng-model="surname" ng-disabled="!edit" placeholder="Surname">
+        <button class="w3-btn w3-green w3-ripple" ng-click="saveStudent()" ng-disabled="error || incomplete">&#10004; Save Changes</button>
+    </form>
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="usersDemo.js"></script>
+
+</body>
+</html>
