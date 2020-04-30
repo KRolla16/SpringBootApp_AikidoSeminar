@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.github.gwenn:sqlite-dialect:master">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/github/gwenn/sqlite-dialect/master/sqlite-dialect-master.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/github/gwenn/sqlite-dialect/master/sqlite-dialect-master-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/github/gwenn/sqlite-dialect/master/sqlite-dialect-master-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
